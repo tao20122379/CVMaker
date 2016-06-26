@@ -6,44 +6,49 @@ provides-nominal:
 provides-member:
 - ["C7CVMaker11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillResignActive"
-- "managedObjectContext"
-- "managedObjectModel"
 - "applicationWillEnterForeground"
-- "applicationDocumentsDirectory"
-- "applicationDidEnterBackground"
+- "nav"
+- "managedObjectContext"
 - "saveContext"
-- "applicationWillTerminate"
-- "application"
-- "persistentStoreCoordinator"
+- "applicationDidEnterBackground"
 - "window"
+- "application"
+- "applicationWillTerminate"
+- "managedObjectModel"
+- "homeVC"
 - "applicationDidBecomeActive"
+- "applicationWillResignActive"
+- "applicationDocumentsDirectory"
+- "persistentStoreCoordinator"
 depends-top-level:
-- "NSObject"
-- !private "NSLog"
-- !private "NSLocalizedDescriptionKey"
 - !private "String"
-- "NSManagedObjectModel"
-- !private "NSUnderlyingErrorKey"
+- "UINavigationController"
 - "NSManagedObjectContext"
 - !private "NSLocalizedFailureReasonErrorKey"
-- "NSPersistentStoreCoordinator"
-- !private "abort"
-- "AppDelegate"
-- "StringLiteralType"
-- !private "-"
-- !private "NSBundle"
-- !private "NSError"
-- "Bool"
-- "NSURL"
-- "AnyObject"
-- "UIApplicationDelegate"
-- !private "NSSQLiteStoreType"
 - "UIApplication"
-- "UIResponder"
-- "UIWindow"
+- "NSURL"
+- !private "UIScreen"
+- "Bool"
 - !private "NSFileManager"
+- !private "-"
+- "UIApplicationDelegate"
+- !private "NSLog"
+- "NSPersistentStoreCoordinator"
+- !private "NSBundle"
+- "StringLiteralType"
+- "UIWindow"
+- !private "NSLocalizedDescriptionKey"
+- "HomeViewController"
+- "NSObject"
+- "NSManagedObjectModel"
+- "AppDelegate"
+- !private "NSError"
 - !private "BooleanLiteralType"
+- "UIResponder"
+- !private "abort"
+- !private "NSUnderlyingErrorKey"
+- !private "NSSQLiteStoreType"
+- "AnyObject"
 depends-member:
 - !private ["Ps9AnyObject", "AnyObject"]
 - !private ["Ps9AnyObject", "NSBundle"]
@@ -58,6 +63,9 @@ depends-member:
 - !private ["Ps9AnyObject", "NSSQLiteStoreType"]
 - !private ["Ps9AnyObject", "NSUnderlyingErrorKey"]
 - !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "UINavigationController"]
+- !private ["Ps9AnyObject", "UIScreen"]
+- !private ["Ps9AnyObject", "UIWindow"]
 - !private ["Ps9AnyObject", "URLByAppendingPathComponent"]
 - !private ["Ps9AnyObject", "URLForResource"]
 - !private ["Ps9AnyObject", "URLsForDirectory"]
@@ -77,17 +85,24 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillEnterForeground"]
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
+- !private ["Ps9AnyObject", "bounds"]
 - !private ["Ps9AnyObject", "defaultManager"]
 - !private ["Ps9AnyObject", "deinit"]
 - !private ["Ps9AnyObject", "hasChanges"]
+- ["Ps9AnyObject", "homeVC"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "loadNibNamed"]
 - !private ["Ps9AnyObject", "mainBundle"]
+- !private ["Ps9AnyObject", "mainScreen"]
+- !private ["Ps9AnyObject", "makeKeyAndVisible"]
 - ["Ps9AnyObject", "managedObjectContext"]
 - ["Ps9AnyObject", "managedObjectContext.storage"]
 - ["Ps9AnyObject", "managedObjectModel"]
 - ["Ps9AnyObject", "managedObjectModel.storage"]
+- ["Ps9AnyObject", "nav"]
 - ["Ps9AnyObject", "persistentStoreCoordinator"]
 - ["Ps9AnyObject", "persistentStoreCoordinator.storage"]
+- !private ["Ps9AnyObject", "rootViewController"]
 - !private ["Ps9AnyObject", "save"]
 - ["Ps9AnyObject", "saveContext"]
 - !private ["Ps9AnyObject", "userInfo"]
@@ -95,6 +110,7 @@ depends-member:
 - ["Ps9AnyObject", ""]
 - ["C7CVMaker11AppDelegate", "AnyObject"]
 - ["C7CVMaker11AppDelegate", "Bool"]
+- ["C7CVMaker11AppDelegate", "HomeViewController"]
 - !private ["C7CVMaker11AppDelegate", "NSBundle"]
 - !private ["C7CVMaker11AppDelegate", "NSError"]
 - !private ["C7CVMaker11AppDelegate", "NSFileManager"]
@@ -110,6 +126,8 @@ depends-member:
 - !private ["C7CVMaker11AppDelegate", "NSUnderlyingErrorKey"]
 - !private ["C7CVMaker11AppDelegate", "String"]
 - ["C7CVMaker11AppDelegate", "UIApplication"]
+- ["C7CVMaker11AppDelegate", "UINavigationController"]
+- !private ["C7CVMaker11AppDelegate", "UIScreen"]
 - ["C7CVMaker11AppDelegate", "UIWindow"]
 - !private ["C7CVMaker11AppDelegate", "abort"]
 - ["C7CVMaker11AppDelegate", "application"]
@@ -127,11 +145,13 @@ depends-member:
 - ["C7CVMaker11AppDelegate", "applicationWillResignActive"]
 - ["C7CVMaker11AppDelegate", "applicationWillTerminate"]
 - ["C7CVMaker11AppDelegate", "deinit"]
+- ["C7CVMaker11AppDelegate", "homeVC"]
 - ["C7CVMaker11AppDelegate", "init"]
 - ["C7CVMaker11AppDelegate", "managedObjectContext"]
 - !private ["C7CVMaker11AppDelegate", "managedObjectContext.storage"]
 - ["C7CVMaker11AppDelegate", "managedObjectModel"]
 - !private ["C7CVMaker11AppDelegate", "managedObjectModel.storage"]
+- ["C7CVMaker11AppDelegate", "nav"]
 - ["C7CVMaker11AppDelegate", "persistentStoreCoordinator"]
 - !private ["C7CVMaker11AppDelegate", "persistentStoreCoordinator.storage"]
 - ["C7CVMaker11AppDelegate", "saveContext"]
@@ -139,14 +159,18 @@ depends-member:
 - !private ["Sa", "Generator"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
+- !private ["Sa", "first"]
 - !private ["Sa", "subscript"]
 - !private ["Ps23ArrayLiteralConvertible", "Generator"]
 - !private ["Ps23ArrayLiteralConvertible", "Index"]
 - !private ["Ps23ArrayLiteralConvertible", "SubSequence"]
 - !private ["Ps23ArrayLiteralConvertible", "UserDomainMask"]
+- !private ["Ps23ArrayLiteralConvertible", "_Element"]
 - !private ["Ps23ArrayLiteralConvertible", "count"]
+- !private ["Ps23ArrayLiteralConvertible", "first"]
 - !private ["Ps23ArrayLiteralConvertible", "subscript"]
 - !private ["Vs10ArraySlice", "Generator"]
 - !private ["Vs10ArraySlice", "Index"]
@@ -173,6 +197,9 @@ depends-member:
 - !private ["Ps11CVarArgType", "NSSQLiteStoreType"]
 - !private ["Ps11CVarArgType", "NSUnderlyingErrorKey"]
 - !private ["Ps11CVarArgType", "String"]
+- !private ["Ps11CVarArgType", "UINavigationController"]
+- !private ["Ps11CVarArgType", "UIScreen"]
+- !private ["Ps11CVarArgType", "UIWindow"]
 - !private ["Ps11CVarArgType", "URLByAppendingPathComponent"]
 - !private ["Ps11CVarArgType", "URLForResource"]
 - !private ["Ps11CVarArgType", "URLsForDirectory"]
@@ -192,16 +219,23 @@ depends-member:
 - ["Ps11CVarArgType", "applicationWillEnterForeground"]
 - ["Ps11CVarArgType", "applicationWillResignActive"]
 - ["Ps11CVarArgType", "applicationWillTerminate"]
+- !private ["Ps11CVarArgType", "bounds"]
 - !private ["Ps11CVarArgType", "defaultManager"]
 - !private ["Ps11CVarArgType", "hasChanges"]
+- ["Ps11CVarArgType", "homeVC"]
 - ["Ps11CVarArgType", "init"]
+- !private ["Ps11CVarArgType", "loadNibNamed"]
 - !private ["Ps11CVarArgType", "mainBundle"]
+- !private ["Ps11CVarArgType", "mainScreen"]
+- !private ["Ps11CVarArgType", "makeKeyAndVisible"]
 - ["Ps11CVarArgType", "managedObjectContext"]
 - ["Ps11CVarArgType", "managedObjectContext.storage"]
 - ["Ps11CVarArgType", "managedObjectModel"]
 - ["Ps11CVarArgType", "managedObjectModel.storage"]
+- ["Ps11CVarArgType", "nav"]
 - ["Ps11CVarArgType", "persistentStoreCoordinator"]
 - ["Ps11CVarArgType", "persistentStoreCoordinator.storage"]
+- !private ["Ps11CVarArgType", "rootViewController"]
 - !private ["Ps11CVarArgType", "save"]
 - ["Ps11CVarArgType", "saveContext"]
 - !private ["Ps11CVarArgType", "userInfo"]
@@ -213,6 +247,7 @@ depends-member:
 - !private ["Ps14CollectionType", "SubSequence"]
 - !private ["Ps14CollectionType", "_Element"]
 - !private ["Ps14CollectionType", "count"]
+- !private ["Ps14CollectionType", "first"]
 - !private ["Ps14CollectionType", "init"]
 - !private ["Ps14CollectionType", "subscript"]
 - !private ["Ps10Comparable", "Distance"]
@@ -234,9 +269,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSUnderlyingErrorKey"]
 - !private ["Ps28CustomDebugStringConvertible", "String"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "UINavigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "UIScreen"]
+- !private ["Ps28CustomDebugStringConvertible", "UIWindow"]
 - !private ["Ps28CustomDebugStringConvertible", "URLByAppendingPathComponent"]
 - !private ["Ps28CustomDebugStringConvertible", "URLForResource"]
 - !private ["Ps28CustomDebugStringConvertible", "URLsForDirectory"]
+- !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "abort"]
 - !private ["Ps28CustomDebugStringConvertible", "addPersistentStoreWithType"]
 - ["Ps28CustomDebugStringConvertible", "application"]
@@ -253,17 +292,25 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- !private ["Ps28CustomDebugStringConvertible", "bounds"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
 - !private ["Ps28CustomDebugStringConvertible", "defaultManager"]
+- !private ["Ps28CustomDebugStringConvertible", "first"]
 - !private ["Ps28CustomDebugStringConvertible", "hasChanges"]
+- ["Ps28CustomDebugStringConvertible", "homeVC"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "loadNibNamed"]
 - !private ["Ps28CustomDebugStringConvertible", "mainBundle"]
+- !private ["Ps28CustomDebugStringConvertible", "mainScreen"]
+- !private ["Ps28CustomDebugStringConvertible", "makeKeyAndVisible"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectContext"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectContext.storage"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectModel"]
 - ["Ps28CustomDebugStringConvertible", "managedObjectModel.storage"]
+- ["Ps28CustomDebugStringConvertible", "nav"]
 - ["Ps28CustomDebugStringConvertible", "persistentStoreCoordinator"]
 - ["Ps28CustomDebugStringConvertible", "persistentStoreCoordinator.storage"]
+- !private ["Ps28CustomDebugStringConvertible", "rootViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "save"]
 - ["Ps28CustomDebugStringConvertible", "saveContext"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
@@ -288,9 +335,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSUnderlyingErrorKey"]
 - !private ["Ps23CustomStringConvertible", "String"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "UINavigationController"]
+- !private ["Ps23CustomStringConvertible", "UIScreen"]
+- !private ["Ps23CustomStringConvertible", "UIWindow"]
 - !private ["Ps23CustomStringConvertible", "URLByAppendingPathComponent"]
 - !private ["Ps23CustomStringConvertible", "URLForResource"]
 - !private ["Ps23CustomStringConvertible", "URLsForDirectory"]
+- !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "abort"]
 - !private ["Ps23CustomStringConvertible", "addPersistentStoreWithType"]
@@ -308,17 +359,25 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["Ps23CustomStringConvertible", "bounds"]
 - !private ["Ps23CustomStringConvertible", "count"]
 - !private ["Ps23CustomStringConvertible", "defaultManager"]
+- !private ["Ps23CustomStringConvertible", "first"]
 - !private ["Ps23CustomStringConvertible", "hasChanges"]
+- ["Ps23CustomStringConvertible", "homeVC"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "loadNibNamed"]
 - !private ["Ps23CustomStringConvertible", "mainBundle"]
+- !private ["Ps23CustomStringConvertible", "mainScreen"]
+- !private ["Ps23CustomStringConvertible", "makeKeyAndVisible"]
 - ["Ps23CustomStringConvertible", "managedObjectContext"]
 - ["Ps23CustomStringConvertible", "managedObjectContext.storage"]
 - ["Ps23CustomStringConvertible", "managedObjectModel"]
 - ["Ps23CustomStringConvertible", "managedObjectModel.storage"]
+- ["Ps23CustomStringConvertible", "nav"]
 - ["Ps23CustomStringConvertible", "persistentStoreCoordinator"]
 - ["Ps23CustomStringConvertible", "persistentStoreCoordinator.storage"]
+- !private ["Ps23CustomStringConvertible", "rootViewController"]
 - !private ["Ps23CustomStringConvertible", "save"]
 - ["Ps23CustomStringConvertible", "saveContext"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
@@ -347,6 +406,9 @@ depends-member:
 - !private ["Ps9Equatable", "NSSQLiteStoreType"]
 - !private ["Ps9Equatable", "NSUnderlyingErrorKey"]
 - !private ["Ps9Equatable", "String"]
+- !private ["Ps9Equatable", "UINavigationController"]
+- !private ["Ps9Equatable", "UIScreen"]
+- !private ["Ps9Equatable", "UIWindow"]
 - !private ["Ps9Equatable", "URLByAppendingPathComponent"]
 - !private ["Ps9Equatable", "URLForResource"]
 - !private ["Ps9Equatable", "URLsForDirectory"]
@@ -368,16 +430,23 @@ depends-member:
 - ["Ps9Equatable", "applicationWillEnterForeground"]
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
+- !private ["Ps9Equatable", "bounds"]
 - !private ["Ps9Equatable", "defaultManager"]
 - !private ["Ps9Equatable", "hasChanges"]
+- ["Ps9Equatable", "homeVC"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "loadNibNamed"]
 - !private ["Ps9Equatable", "mainBundle"]
+- !private ["Ps9Equatable", "mainScreen"]
+- !private ["Ps9Equatable", "makeKeyAndVisible"]
 - ["Ps9Equatable", "managedObjectContext"]
 - ["Ps9Equatable", "managedObjectContext.storage"]
 - ["Ps9Equatable", "managedObjectModel"]
 - ["Ps9Equatable", "managedObjectModel.storage"]
+- ["Ps9Equatable", "nav"]
 - ["Ps9Equatable", "persistentStoreCoordinator"]
 - ["Ps9Equatable", "persistentStoreCoordinator.storage"]
+- !private ["Ps9Equatable", "rootViewController"]
 - !private ["Ps9Equatable", "save"]
 - ["Ps9Equatable", "saveContext"]
 - !private ["Ps9Equatable", "userInfo"]
@@ -407,6 +476,9 @@ depends-member:
 - !private ["Ps8Hashable", "NSSQLiteStoreType"]
 - !private ["Ps8Hashable", "NSUnderlyingErrorKey"]
 - !private ["Ps8Hashable", "String"]
+- !private ["Ps8Hashable", "UINavigationController"]
+- !private ["Ps8Hashable", "UIScreen"]
+- !private ["Ps8Hashable", "UIWindow"]
 - !private ["Ps8Hashable", "URLByAppendingPathComponent"]
 - !private ["Ps8Hashable", "URLForResource"]
 - !private ["Ps8Hashable", "URLsForDirectory"]
@@ -427,26 +499,35 @@ depends-member:
 - ["Ps8Hashable", "applicationWillEnterForeground"]
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
+- !private ["Ps8Hashable", "bounds"]
 - !private ["Ps8Hashable", "defaultManager"]
 - !private ["Ps8Hashable", "hasChanges"]
+- ["Ps8Hashable", "homeVC"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "loadNibNamed"]
 - !private ["Ps8Hashable", "mainBundle"]
+- !private ["Ps8Hashable", "mainScreen"]
+- !private ["Ps8Hashable", "makeKeyAndVisible"]
 - ["Ps8Hashable", "managedObjectContext"]
 - ["Ps8Hashable", "managedObjectContext.storage"]
 - ["Ps8Hashable", "managedObjectModel"]
 - ["Ps8Hashable", "managedObjectModel.storage"]
+- ["Ps8Hashable", "nav"]
 - ["Ps8Hashable", "persistentStoreCoordinator"]
 - ["Ps8Hashable", "persistentStoreCoordinator.storage"]
+- !private ["Ps8Hashable", "rootViewController"]
 - !private ["Ps8Hashable", "save"]
 - ["Ps8Hashable", "saveContext"]
 - !private ["Ps8Hashable", "userInfo"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- !private ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Generator"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "SubSequence"]
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "first"]
 - !private ["Ps9Indexable", "init"]
 - !private ["Ps9Indexable", "subscript"]
 - !private ["Vs17IndexingGenerator", "Element"]
@@ -469,24 +550,33 @@ depends-member:
 - !private ["Ps21MutableCollectionType", "Generator"]
 - !private ["Ps21MutableCollectionType", "Index"]
 - !private ["Ps21MutableCollectionType", "SubSequence"]
+- !private ["Ps21MutableCollectionType", "_Element"]
 - !private ["Ps21MutableCollectionType", "count"]
+- !private ["Ps21MutableCollectionType", "first"]
 - !private ["Ps21MutableCollectionType", "subscript"]
 - !private ["Ps16MutableIndexable", "Generator"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "SubSequence"]
+- !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "first"]
 - !private ["Ps16MutableIndexable", "subscript"]
 - !private ["Ps16MutableSliceable", "Generator"]
 - !private ["Ps16MutableSliceable", "Index"]
 - !private ["Ps16MutableSliceable", "SubSequence"]
+- !private ["Ps16MutableSliceable", "_Element"]
 - !private ["Ps16MutableSliceable", "count"]
+- !private ["Ps16MutableSliceable", "first"]
 - !private ["Ps16MutableSliceable", "subscript"]
 - !private ["CSo8NSBundle", "URLForResource"]
+- !private ["CSo8NSBundle", "loadNibNamed"]
 - !private ["CSo8NSBundle", "mainBundle"]
 - !private ["PSo8NSCoding", "URLByAppendingPathComponent"]
 - !private ["PSo8NSCoding", "hasChanges"]
 - !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "makeKeyAndVisible"]
 - !private ["PSo8NSCoding", "persistentStoreCoordinator"]
+- !private ["PSo8NSCoding", "rootViewController"]
 - !private ["PSo8NSCoding", "save"]
 - !private ["PSo8NSCoding", "userInfo"]
 - !private ["PSo9NSCopying", "URLByAppendingPathComponent"]
@@ -494,6 +584,7 @@ depends-member:
 - !private ["PSo9NSCopying", "userInfo"]
 - !private ["CSo7NSError", "init"]
 - !private ["CSo7NSError", "userInfo"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo17NSFastEnumeration", "init"]
 - !private ["CSo13NSFileManager", "URLsForDirectory"]
 - !private ["CSo13NSFileManager", "defaultManager"]
@@ -511,6 +602,7 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "HomeViewController"]
 - !private ["CSo8NSObject", "NSBundle"]
 - !private ["CSo8NSObject", "NSError"]
 - !private ["CSo8NSObject", "NSFileManager"]
@@ -526,6 +618,8 @@ depends-member:
 - !private ["CSo8NSObject", "NSUnderlyingErrorKey"]
 - !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIApplication"]
+- ["CSo8NSObject", "UINavigationController"]
+- !private ["CSo8NSObject", "UIScreen"]
 - ["CSo8NSObject", "UIWindow"]
 - !private ["CSo8NSObject", "URLByAppendingPathComponent"]
 - !private ["CSo8NSObject", "URLForResource"]
@@ -546,16 +640,23 @@ depends-member:
 - ["CSo8NSObject", "applicationWillEnterForeground"]
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
+- !private ["CSo8NSObject", "bounds"]
 - !private ["CSo8NSObject", "defaultManager"]
 - !private ["CSo8NSObject", "hasChanges"]
+- ["CSo8NSObject", "homeVC"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "loadNibNamed"]
 - !private ["CSo8NSObject", "mainBundle"]
+- !private ["CSo8NSObject", "mainScreen"]
+- !private ["CSo8NSObject", "makeKeyAndVisible"]
 - ["CSo8NSObject", "managedObjectContext"]
 - ["CSo8NSObject", "managedObjectContext.storage"]
 - ["CSo8NSObject", "managedObjectModel"]
 - ["CSo8NSObject", "managedObjectModel.storage"]
+- ["CSo8NSObject", "nav"]
 - ["CSo8NSObject", "persistentStoreCoordinator"]
 - ["CSo8NSObject", "persistentStoreCoordinator.storage"]
+- !private ["CSo8NSObject", "rootViewController"]
 - !private ["CSo8NSObject", "save"]
 - ["CSo8NSObject", "saveContext"]
 - !private ["CSo8NSObject", "userInfo"]
@@ -573,6 +674,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSSQLiteStoreType"]
 - !private ["PSo16NSObjectProtocol", "NSUnderlyingErrorKey"]
 - !private ["PSo16NSObjectProtocol", "String"]
+- !private ["PSo16NSObjectProtocol", "UINavigationController"]
+- !private ["PSo16NSObjectProtocol", "UIScreen"]
+- !private ["PSo16NSObjectProtocol", "UIWindow"]
 - !private ["PSo16NSObjectProtocol", "URLByAppendingPathComponent"]
 - !private ["PSo16NSObjectProtocol", "URLForResource"]
 - !private ["PSo16NSObjectProtocol", "URLsForDirectory"]
@@ -592,16 +696,23 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "bounds"]
 - !private ["PSo16NSObjectProtocol", "defaultManager"]
 - !private ["PSo16NSObjectProtocol", "hasChanges"]
+- ["PSo16NSObjectProtocol", "homeVC"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "loadNibNamed"]
 - !private ["PSo16NSObjectProtocol", "mainBundle"]
+- !private ["PSo16NSObjectProtocol", "mainScreen"]
+- !private ["PSo16NSObjectProtocol", "makeKeyAndVisible"]
 - ["PSo16NSObjectProtocol", "managedObjectContext"]
 - ["PSo16NSObjectProtocol", "managedObjectContext.storage"]
 - ["PSo16NSObjectProtocol", "managedObjectModel"]
 - ["PSo16NSObjectProtocol", "managedObjectModel.storage"]
+- ["PSo16NSObjectProtocol", "nav"]
 - ["PSo16NSObjectProtocol", "persistentStoreCoordinator"]
 - ["PSo16NSObjectProtocol", "persistentStoreCoordinator.storage"]
+- !private ["PSo16NSObjectProtocol", "rootViewController"]
 - !private ["PSo16NSObjectProtocol", "save"]
 - ["PSo16NSObjectProtocol", "saveContext"]
 - !private ["PSo16NSObjectProtocol", "userInfo"]
@@ -624,7 +735,9 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "Generator"]
 - !private ["Ps30RangeReplaceableCollectionType", "Index"]
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["Ps30RangeReplaceableCollectionType", "_Element"]
 - !private ["Ps30RangeReplaceableCollectionType", "count"]
+- !private ["Ps30RangeReplaceableCollectionType", "first"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
 - !private ["Ps16RawRepresentable", "DocumentDirectory"]
 - !private ["Ps16RawRepresentable", "MainQueueConcurrencyType"]
@@ -635,6 +748,7 @@ depends-member:
 - !private ["Ps12SequenceType", "SubSequence"]
 - !private ["Ps12SequenceType", "_Element"]
 - !private ["Ps12SequenceType", "count"]
+- !private ["Ps12SequenceType", "first"]
 - !private ["Ps12SequenceType", "init"]
 - !private ["Ps12SequenceType", "subscript"]
 - !private ["Ps14SetAlgebraType", "UserDomainMask"]
@@ -653,6 +767,15 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps30StringInterpolationConvertible", "init"]
 - !private ["Ps24StringLiteralConvertible", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "makeKeyAndVisible"]
+- !private ["PSo29UIAccessibilityIdentification", "rootViewController"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "makeKeyAndVisible"]
+- !private ["PSo12UIAppearance", "rootViewController"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "makeKeyAndVisible"]
+- !private ["PSo21UIAppearanceContainer", "rootViewController"]
 - !private ["PSo21UIApplicationDelegate", "AnyObject"]
 - !private ["PSo21UIApplicationDelegate", "NSBundle"]
 - !private ["PSo21UIApplicationDelegate", "NSError"]
@@ -666,6 +789,9 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "NSSQLiteStoreType"]
 - !private ["PSo21UIApplicationDelegate", "NSUnderlyingErrorKey"]
 - !private ["PSo21UIApplicationDelegate", "String"]
+- !private ["PSo21UIApplicationDelegate", "UINavigationController"]
+- !private ["PSo21UIApplicationDelegate", "UIScreen"]
+- !private ["PSo21UIApplicationDelegate", "UIWindow"]
 - !private ["PSo21UIApplicationDelegate", "abort"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
@@ -680,14 +806,28 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "homeVC"]
 - !private ["PSo21UIApplicationDelegate", "managedObjectContext"]
 - !private ["PSo21UIApplicationDelegate", "managedObjectModel"]
+- !private ["PSo21UIApplicationDelegate", "nav"]
 - !private ["PSo21UIApplicationDelegate", "persistentStoreCoordinator"]
 - !private ["PSo21UIApplicationDelegate", "saveContext"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "makeKeyAndVisible"]
+- !private ["PSo17UICoordinateSpace", "rootViewController"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "makeKeyAndVisible"]
+- !private ["PSo13UIDynamicItem", "rootViewController"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "makeKeyAndVisible"]
+- !private ["PSo18UIFocusEnvironment", "rootViewController"]
+- !private ["CSo22UINavigationController", "init"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "HomeViewController"]
 - !private ["CSo11UIResponder", "NSBundle"]
 - !private ["CSo11UIResponder", "NSError"]
 - !private ["CSo11UIResponder", "NSFileManager"]
@@ -703,6 +843,8 @@ depends-member:
 - !private ["CSo11UIResponder", "NSUnderlyingErrorKey"]
 - !private ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIApplication"]
+- ["CSo11UIResponder", "UINavigationController"]
+- !private ["CSo11UIResponder", "UIScreen"]
 - ["CSo11UIResponder", "UIWindow"]
 - !private ["CSo11UIResponder", "abort"]
 - ["CSo11UIResponder", "application"]
@@ -719,16 +861,35 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillEnterForeground"]
 - ["CSo11UIResponder", "applicationWillResignActive"]
 - ["CSo11UIResponder", "applicationWillTerminate"]
+- ["CSo11UIResponder", "homeVC"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "makeKeyAndVisible"]
 - ["CSo11UIResponder", "managedObjectContext"]
 - ["CSo11UIResponder", "managedObjectContext.storage"]
 - ["CSo11UIResponder", "managedObjectModel"]
 - ["CSo11UIResponder", "managedObjectModel.storage"]
+- ["CSo11UIResponder", "nav"]
 - ["CSo11UIResponder", "persistentStoreCoordinator"]
 - ["CSo11UIResponder", "persistentStoreCoordinator.storage"]
+- !private ["CSo11UIResponder", "rootViewController"]
 - ["CSo11UIResponder", "saveContext"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
+- !private ["CSo8UIScreen", "bounds"]
+- !private ["CSo8UIScreen", "mainScreen"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo18UITraitEnvironment", "bounds"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "mainScreen"]
+- !private ["PSo18UITraitEnvironment", "makeKeyAndVisible"]
+- !private ["PSo18UITraitEnvironment", "rootViewController"]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "makeKeyAndVisible"]
+- !private ["CSo6UIView", "rootViewController"]
+- !private ["CSo16UIViewController", "init"]
+- !private ["CSo8UIWindow", "init"]
+- !private ["CSo8UIWindow", "makeKeyAndVisible"]
+- !private ["CSo8UIWindow", "rootViewController"]
 - !private ["Su", "deinit"]
 - !private ["Vs6UInt16", "deinit"]
 - !private ["Vs6UInt32", "deinit"]
@@ -739,7 +900,9 @@ depends-member:
 - !private ["Ps10_ArrayType", "Generator"]
 - !private ["Ps10_ArrayType", "Index"]
 - !private ["Ps10_ArrayType", "SubSequence"]
+- !private ["Ps10_ArrayType", "_Element"]
 - !private ["Ps10_ArrayType", "count"]
+- !private ["Ps10_ArrayType", "first"]
 - !private ["Ps10_ArrayType", "subscript"]
 - !private ["Ps33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
@@ -751,7 +914,9 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "Generator"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "SubSequence"]
+- !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "first"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps32_FileReferenceLiteralConvertible", "URLByAppendingPathComponent"]
 - !private ["Ps14_Incrementable", "Distance"]
@@ -765,8 +930,10 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - !private ["Ps21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "first"]
 - !private ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps22_RandomAccessAmbiguity", "Distance"]
@@ -777,9 +944,13 @@ depends-member:
 - !private ["Ps12_Reflectable", "IntegerLiteralType"]
 - !private ["Ps12_Reflectable", "SubSequence"]
 - !private ["Ps12_Reflectable", "URLByAppendingPathComponent"]
+- !private ["Ps12_Reflectable", "_Element"]
 - !private ["Ps12_Reflectable", "_getBuiltinLogicValue"]
 - !private ["Ps12_Reflectable", "count"]
+- !private ["Ps12_Reflectable", "first"]
 - !private ["Ps12_Reflectable", "init"]
+- !private ["Ps12_Reflectable", "makeKeyAndVisible"]
+- !private ["Ps12_Reflectable", "rootViewController"]
 - !private ["Ps12_Reflectable", "subscript"]
 - !private ["Ps18_SignedIntegerType", "Distance"]
 - !private ["Ps18_SignedIntegerType", "IntegerLiteralType"]
@@ -810,6 +981,7 @@ depends-nominal:
 - !private "Ps16ForwardIndexType"
 - !private "Ps13GeneratorType"
 - "Ps8Hashable"
+- !private "SQ"
 - !private "Ps9Indexable"
 - !private "Vs17IndexingGenerator"
 - !private "Si"
@@ -828,6 +1000,7 @@ depends-nominal:
 - !private "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - !private "CSo7NSError"
+- !private "PSo26NSExtensionRequestHandling"
 - !private "PSo17NSFastEnumeration"
 - !private "CSo13NSFileManager"
 - !private "PSo9NSLocking"
@@ -859,8 +1032,22 @@ depends-nominal:
 - !private "SS"
 - !private "Ps30StringInterpolationConvertible"
 - !private "Ps24StringLiteralConvertible"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
 - "PSo21UIApplicationDelegate"
+- !private "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "CSo22UINavigationController"
 - "CSo11UIResponder"
+- !private "CSo8UIScreen"
+- !private "PSo16UIStateRestoring"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- !private "CSo16UIViewController"
+- !private "CSo8UIWindow"
 - !private "Su"
 - !private "Vs6UInt16"
 - !private "Vs6UInt32"
@@ -895,4 +1082,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
-interface-hash: "a2406c2c0886540ac7e3450e059c99ad"
+interface-hash: "e25feb5c7b95f66b812286899060bb28"
