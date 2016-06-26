@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		598AC3261D1FE66500A0073D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AC3251D1FE66500A0073D /* AppDelegate.swift */; };
+		598AC3281D1FE66500A0073D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AC3271D1FE66500A0073D /* ViewController.swift */; };
+		598AC32B1D1FE66500A0073D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598AC3291D1FE66500A0073D /* Main.storyboard */; };
+		598AC32E1D1FE66500A0073D /* CVMaker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 598AC32C1D1FE66500A0073D /* CVMaker.xcdatamodeld */; };
+		598AC3301D1FE66500A0073D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598AC32F1D1FE66500A0073D /* Assets.xcassets */; };
+		598AC3331D1FE66500A0073D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598AC3311D1FE66500A0073D /* LaunchScreen.storyboard */; };
+		598AC33E1D1FE66500A0073D /* CVMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AC33D1D1FE66500A0073D /* CVMakerTests.swift */; };
+		598AC3491D1FE66500A0073D /* CVMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598AC3481D1FE66500A0073D /* CVMakerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		598AC33A1D1FE66500A0073D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 598AC31A1D1FE66500A0073D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 598AC3211D1FE66500A0073D;
+			remoteInfo = CVMaker;
+		};
+		598AC3451D1FE66500A0073D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 598AC31A1D1FE66500A0073D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 598AC3211D1FE66500A0073D;
+			remoteInfo = CVMaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		598AC3221D1FE66500A0073D /* CVMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CVMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		598AC3251D1FE66500A0073D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		598AC3271D1FE66500A0073D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		598AC32A1D1FE66500A0073D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		598AC32D1D1FE66500A0073D /* CVMaker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CVMaker.xcdatamodel; sourceTree = "<group>"; };
+		598AC32F1D1FE66500A0073D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		598AC3321D1FE66500A0073D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		598AC3341D1FE66500A0073D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		598AC3391D1FE66500A0073D /* CVMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		598AC33D1D1FE66500A0073D /* CVMakerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMakerTests.swift; sourceTree = "<group>"; };
+		598AC33F1D1FE66500A0073D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		598AC3441D1FE66500A0073D /* CVMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CVMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		598AC3481D1FE66500A0073D /* CVMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVMakerUITests.swift; sourceTree = "<group>"; };
+		598AC34A1D1FE66500A0073D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		598AC31F1D1FE66500A0073D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3361D1FE66500A0073D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3411D1FE66500A0073D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		598AC3191D1FE66500A0073D = {
+			isa = PBXGroup;
+			children = (
+				598AC3241D1FE66500A0073D /* CVMaker */,
+				598AC33C1D1FE66500A0073D /* CVMakerTests */,
+				598AC3471D1FE66500A0073D /* CVMakerUITests */,
+				598AC3231D1FE66500A0073D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		598AC3231D1FE66500A0073D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				598AC3221D1FE66500A0073D /* CVMaker.app */,
+				598AC3391D1FE66500A0073D /* CVMakerTests.xctest */,
+				598AC3441D1FE66500A0073D /* CVMakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		598AC3241D1FE66500A0073D /* CVMaker */ = {
+			isa = PBXGroup;
+			children = (
+				598AC3251D1FE66500A0073D /* AppDelegate.swift */,
+				598AC3271D1FE66500A0073D /* ViewController.swift */,
+				598AC3291D1FE66500A0073D /* Main.storyboard */,
+				598AC32F1D1FE66500A0073D /* Assets.xcassets */,
+				598AC3311D1FE66500A0073D /* LaunchScreen.storyboard */,
+				598AC3341D1FE66500A0073D /* Info.plist */,
+				598AC32C1D1FE66500A0073D /* CVMaker.xcdatamodeld */,
+			);
+			path = CVMaker;
+			sourceTree = "<group>";
+		};
+		598AC33C1D1FE66500A0073D /* CVMakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				598AC33D1D1FE66500A0073D /* CVMakerTests.swift */,
+				598AC33F1D1FE66500A0073D /* Info.plist */,
+			);
+			path = CVMakerTests;
+			sourceTree = "<group>";
+		};
+		598AC3471D1FE66500A0073D /* CVMakerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				598AC3481D1FE66500A0073D /* CVMakerUITests.swift */,
+				598AC34A1D1FE66500A0073D /* Info.plist */,
+			);
+			path = CVMakerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		598AC3211D1FE66500A0073D /* CVMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 598AC34D1D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMaker" */;
+			buildPhases = (
+				598AC31E1D1FE66500A0073D /* Sources */,
+				598AC31F1D1FE66500A0073D /* Frameworks */,
+				598AC3201D1FE66500A0073D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CVMaker;
+			productName = CVMaker;
+			productReference = 598AC3221D1FE66500A0073D /* CVMaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		598AC3381D1FE66500A0073D /* CVMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 598AC3501D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMakerTests" */;
+			buildPhases = (
+				598AC3351D1FE66500A0073D /* Sources */,
+				598AC3361D1FE66500A0073D /* Frameworks */,
+				598AC3371D1FE66500A0073D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				598AC33B1D1FE66500A0073D /* PBXTargetDependency */,
+			);
+			name = CVMakerTests;
+			productName = CVMakerTests;
+			productReference = 598AC3391D1FE66500A0073D /* CVMakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		598AC3431D1FE66500A0073D /* CVMakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 598AC3531D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMakerUITests" */;
+			buildPhases = (
+				598AC3401D1FE66500A0073D /* Sources */,
+				598AC3411D1FE66500A0073D /* Frameworks */,
+				598AC3421D1FE66500A0073D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				598AC3461D1FE66500A0073D /* PBXTargetDependency */,
+			);
+			name = CVMakerUITests;
+			productName = CVMakerUITests;
+			productReference = 598AC3441D1FE66500A0073D /* CVMakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		598AC31A1D1FE66500A0073D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = khactao;
+				TargetAttributes = {
+					598AC3211D1FE66500A0073D = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HL6NM6R58B;
+					};
+					598AC3381D1FE66500A0073D = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HL6NM6R58B;
+						TestTargetID = 598AC3211D1FE66500A0073D;
+					};
+					598AC3431D1FE66500A0073D = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HL6NM6R58B;
+						TestTargetID = 598AC3211D1FE66500A0073D;
+					};
+				};
+			};
+			buildConfigurationList = 598AC31D1D1FE66500A0073D /* Build configuration list for PBXProject "CVMaker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 598AC3191D1FE66500A0073D;
+			productRefGroup = 598AC3231D1FE66500A0073D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				598AC3211D1FE66500A0073D /* CVMaker */,
+				598AC3381D1FE66500A0073D /* CVMakerTests */,
+				598AC3431D1FE66500A0073D /* CVMakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		598AC3201D1FE66500A0073D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598AC3331D1FE66500A0073D /* LaunchScreen.storyboard in Resources */,
+				598AC3301D1FE66500A0073D /* Assets.xcassets in Resources */,
+				598AC32B1D1FE66500A0073D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3371D1FE66500A0073D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3421D1FE66500A0073D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		598AC31E1D1FE66500A0073D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598AC32E1D1FE66500A0073D /* CVMaker.xcdatamodeld in Sources */,
+				598AC3281D1FE66500A0073D /* ViewController.swift in Sources */,
+				598AC3261D1FE66500A0073D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3351D1FE66500A0073D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598AC33E1D1FE66500A0073D /* CVMakerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		598AC3401D1FE66500A0073D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				598AC3491D1FE66500A0073D /* CVMakerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		598AC33B1D1FE66500A0073D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 598AC3211D1FE66500A0073D /* CVMaker */;
+			targetProxy = 598AC33A1D1FE66500A0073D /* PBXContainerItemProxy */;
+		};
+		598AC3461D1FE66500A0073D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 598AC3211D1FE66500A0073D /* CVMaker */;
+			targetProxy = 598AC3451D1FE66500A0073D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		598AC3291D1FE66500A0073D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				598AC32A1D1FE66500A0073D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		598AC3311D1FE66500A0073D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				598AC3321D1FE66500A0073D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		598AC34B1D1FE66500A0073D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		598AC34C1D1FE66500A0073D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		598AC34E1D1FE66500A0073D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CVMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		598AC34F1D1FE66500A0073D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CVMaker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		598AC3511D1FE66500A0073D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CVMakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVMaker.app/CVMaker";
+			};
+			name = Debug;
+		};
+		598AC3521D1FE66500A0073D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CVMakerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CVMaker.app/CVMaker";
+			};
+			name = Release;
+		};
+		598AC3541D1FE66500A0073D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CVMakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CVMaker;
+			};
+			name = Debug;
+		};
+		598AC3551D1FE66500A0073D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CVMakerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = khactao.CVMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CVMaker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		598AC31D1D1FE66500A0073D /* Build configuration list for PBXProject "CVMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				598AC34B1D1FE66500A0073D /* Debug */,
+				598AC34C1D1FE66500A0073D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		598AC34D1D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				598AC34E1D1FE66500A0073D /* Debug */,
+				598AC34F1D1FE66500A0073D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		598AC3501D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				598AC3511D1FE66500A0073D /* Debug */,
+				598AC3521D1FE66500A0073D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		598AC3531D1FE66500A0073D /* Build configuration list for PBXNativeTarget "CVMakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				598AC3541D1FE66500A0073D /* Debug */,
+				598AC3551D1FE66500A0073D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		598AC32C1D1FE66500A0073D /* CVMaker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				598AC32D1D1FE66500A0073D /* CVMaker.xcdatamodel */,
+			);
+			currentVersion = 598AC32D1D1FE66500A0073D /* CVMaker.xcdatamodel */;
+			path = CVMaker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 598AC31A1D1FE66500A0073D /* Project object */;
+}
