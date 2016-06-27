@@ -1,11 +1,10 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
-options: "055e50c5c9157b5afc9ebf2129f50bb0"
-build_time: [520274549, 455554000]
+options: "aa339d8c98912d6a687e21b51cac563d"
+build_time: [520306219, 491442000]
 inputs:
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/View.swift": [520273562, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/ViewController/ViewController.swift": [520273174, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/CreateCVViewController/HomeCreateViewController/HomeCreateViewController.swift": [520268558, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/CVViewController/CVViewController.swift": [520274224, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/HomeViewController/HomeViewController.swift": [520274548, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/AppDelegate/AppDelegate.swift": [520274224, 0]
-  "/Users/khactao/Desktop/CVMaker/CVMaker/CVMaker/ViewController/CVFormSelectViewController/CVFormSelevtViewController.swift": [520268501, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/ViewController/ViewController/ViewController.swift": [520304850, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/ViewController/CreateCVViewController/HomeCreateViewController/HomeCreateViewController.swift": [520306219, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/ViewController/CVViewController/CVViewController.swift": [520305004, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/ViewController/HomeViewController/HomeViewController.swift": [520305002, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/AppDelegate/AppDelegate.swift": [520305091, 0]
+  "/Users/khactao/Desktop/CVMaker/CVMaker/ViewController/CVFormSelectViewController/CVFormSelevtViewController.swift": [520268501, 0]

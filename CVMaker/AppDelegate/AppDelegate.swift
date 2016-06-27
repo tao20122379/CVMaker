@@ -13,16 +13,8 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var nav: UINavigationController?
-    var homeVC: HomeViewController?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        let screen = UIScreen.mainScreen().bounds
-        self.window = UIWindow(frame: screen)
-        self.homeVC = NSBundle.mainBundle().loadNibNamed("HomeViewController", owner: self, options: nil).first as? HomeViewController
-        self.nav = UINavigationController(rootViewController: homeVC!)
-        self.window!.rootViewController = nav
-        self.window!.makeKeyAndVisible()
         return true
     }
 

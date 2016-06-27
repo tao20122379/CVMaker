@@ -11,6 +11,8 @@ import UIKit
 class HomeViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let cvView = NSBundle.mainBundle().loadNibNamed("CVViewController", owner: self, options: nil).first as! CVViewController
+        self.navigationController?.pushViewController(cvView, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -6,4 +6,14 @@
 //  Copyright © 2016 khactao. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HomeCreateViewController: ViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}

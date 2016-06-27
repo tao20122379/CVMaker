@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C7CVMaker26CVFormSelectViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
 - "CVFormSelectViewController"
 - "ViewController"

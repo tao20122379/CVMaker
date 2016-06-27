@@ -6,8 +6,8 @@ provides-nominal:
 provides-member:
 - ["C7CVMaker16CVViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
 - "ViewController"
 - "CVViewController"
